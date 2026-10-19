@@ -1,0 +1,6 @@
+{
+  "name": "nail-studio-booking",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {"dev": "python3 -m http.server 5173", "build": "node --check src/main.js"}
+}
