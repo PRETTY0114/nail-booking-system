@@ -15,7 +15,7 @@ python3 -m http.server 5173
 ## 上线部署（Vercel + Supabase）
 
 1. 在 Supabase 创建项目，在 SQL Editor 执行 `supabase/migrations/001_initial_schema.sql`。
-2. 在 Vercel 导入此 GitHub 仓库，选择 Other / 静态部署，构建命令留空，输出目录填 `.`。
+2. 在 Vercel 导入此 GitHub 仓库并保留仓库根目录。仓库中的 `vercel.json` 已配置构建命令和根目录静态输出。
 3. 在 `config.js` 填入 `supabaseUrl` 和 `supabaseAnonKey`（Supabase 项目 Settings → API 可找到），再提交并部署。
 4. 上线前必须补齐店铺管理员身份验证与后台访问策略。当前演示看板对能打开网页的人可见；Supabase RLS 已禁止匿名读取预约和更改状态，但前端上线前还需接入 Supabase Auth 并为店员增加受限策略。
 
